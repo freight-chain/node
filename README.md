@@ -45,11 +45,31 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
-brew tap hyperledger/besu
-brew install besu
-git clone https://github.com/freight-chain/node.git
-cd node
-besu --data-path=data public-key export-address --to=data/nodeAddress
+
+$ sudo yum -y install ntp || true
+$ sudo apt-get --assume-yes install ntp || true
+sudo sed -i '/^server/d' /etc/ntp.conf
+sudo tee -a /etc/ntp.conf << EOF
+server time1.google.com iburst
+server time2.google.com iburst
+server time3.google.com iburst
+server time4.google.com iburst
+EOF
+sudo systemctl restart ntp &> /dev/null || true
+sudo systemctl restart ntpd &> /dev/null || true
+sudo service ntp restart &> /dev/null || true
+sudo service ntpd restart &> /dev/null || true
+sudo restart ntp &> /dev/null || true
+sudo restart ntpd &> /dev/null || true
+ntpq -p
+
+$ sudo apt upgrade
+
+$ brew tap hyperledger/besu
+$ brew install besu
+$ git clone https://github.com/freight-chain/node.git
+$ cd node
+$ besu --data-path=data public-key export-address --to=data/nodeAddress
 ```
 
 ```bash
