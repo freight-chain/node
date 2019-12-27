@@ -30,10 +30,14 @@ Verify you installed by running `besu --version` or `bin/besu --version` in the 
 ### Clean Install Commands 
 #### This uses linuxbrew 
 ```bash
-$ sudo apt-get install -y java-common build-essential curl file git software-properties-common ca-certificates wget gnupg-agent apt-transport-https
+$ sudo apt update -y
+$ sudo apt-get install -y java-common build-essential software-properties-common # curl file git software-properties-common ca-certificates wget gnupg-agent apt-transport-https
+$ sudo apt-get update
+$ sudo apt-get install -y java-common
 $ wget https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.deb
 $ sudo dpkg -i amazon-corretto-11-x64-linux-jdk.deb
-
+$ sudo apt update
+# $ sudo apt install gcc g++ make -y
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
@@ -42,7 +46,18 @@ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
 brew tap hyperledger/besu
+brew install besu
 git clone https://github.com/freight-chain/node.git
 cd node
 besu --data-path=data public-key export-address --to=data/nodeAddress
 ```
+
+```bash
+nohup besu --data-path=data --genesis-file=genesis.json --p2p-port=30303 --rpc-http-enabled --rpc-http-api=ETH,NET,CLIQUE --host-whitelist="*" --rpc-http-cors-origins="all" --rpc-http-port=8545 > /home/ubuntu/ft-node-log 2>&1 &
+```
+===
+
+enode://35b59bc87330078d687dc769c4b972beb8621fd71f79168b5decca94def69cd8e056340b2fe7e298e80a0904159af5b658602ea38d002fa98099a10eefaae724@3.133.153.14:30303
+
+===
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
