@@ -1,5 +1,9 @@
 #  Overview
 
+[Freight Trust](https://freighttrust.com)
+[Telegram](https://t.me/freighttrust)
+[For a Current List of Bootnodes Read This Google Sheet](https://docs.google.com/spreadsheets/d/1MQkG1gmciT5mw9tdod3sHryRvUxTXBjt7c1fgg9ndQQ/edit?usp=sharing)
+
 This is intended for ensuring you have the correct directory structure along with the valid configuration files
 - genesis.json
 - static-nodes.json
