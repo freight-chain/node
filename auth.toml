@@ -1,0 +1,7 @@
+[Users.freightserv]
+password = "$2a$10$bGzun2QsuhXkUrb2oTQXwuBHNFBuIjC.7lgmodWXAwLul0ZNMOeom"
+permissions=["net:*","eth:blockNumber"]
+
+[Users.freightcorp]
+password = "$2a$10$.xWCMlI2k3lFu0yxzdp48Ooy4x.9FfAZfbSMNh5OqWM2eNa4yXS.q"
+permissions=["net:version","admin:*"]
