@@ -11,6 +11,20 @@ This is intended for ensuring you have the correct directory structure along wit
 - config.toml
 node/data
 
+Directory Structure 
+├─ besu
+│   ├── genesis.json
+│   ├── data
+│   │   ├── vault (optional)
+│   │   ├── DATASTORE
+│   │   ├── nodeAddress
+│   │   └── key
+│   ├── bin
+│   ├── database
+│   ├── DATABASE_METADATA.json
+└───└── lib
+
+### Already Installed Hyperledger/Besu
 If you already have Hyperledger/Besu installed, simply
 ```bash
 git clone https://github.com/freight-chain/node.git
