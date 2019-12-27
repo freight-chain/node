@@ -1,6 +1,20 @@
-# Quick Start Guide
+#  Overview
 
-This guide is for running on your home computer for understanding before you get into operating your servers. We have trimmed down everything to the basic stuff.
+This is intended for ensuring you have the correct directory structure along with the valid configuration files
+- genesis.json
+- static-nodes.json
+- auth.toml
+- config.toml
+node/data
+
+If you already have Hyperledger/Besu installed, simply
+```bash
+git clone https://github.com/freight-chain/node.git
+cd node
+besu --data-path=data public-key export-address --to=data/nodeAddres
+besu --data-path=data --genesis-file=genesis.json --config-file=config.toml --p2p-port=30303 --rpc-http-enabled --rpc-http-api=ETH,NET,CLIQUE --host-whitelist="*" --rpc-http-cors-origins="all" --rpc-http-port=8545
+```
+Always `git pull` to make sure you have the latest `config.toml` file. 
 
 ### Abstract
 The intent of this guide is to get you to connect to the dry-run network on your personal computer. Having a GUI will help those unfamiliar with using the command line. Please note that this is written from the perspective of a Mac OS X user, and we are working on fixing any Windows issues.
