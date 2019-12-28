@@ -1,0 +1,3 @@
+[submodule "rulebook"]
+	path = rulebook
+	url = https://github.com/freight-chain/rulebook.git
