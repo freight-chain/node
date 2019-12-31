@@ -1,0 +1,14 @@
+# This file defines environment variables for master of ceremony 
+# Defined terms 
+# version 20.1.3
+
+BESU_VERSION=1.3.8
+BESU_GENESIS_FILE_DIRECTORY=~/node/genesis.json
+
+# @dev permissioning specific env variables.
+BESU_NODE_PERM_ACCOUNT=${BESU_NODE_PERM_ACCOUNT}
+
+# @dev private key of the account to deploy the permissioning contracts.
+BESU_NODE_PERM_KEY=${BESU_PRIV_KEY}
+ACCOUNT_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000008888
+NODE_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000009999
