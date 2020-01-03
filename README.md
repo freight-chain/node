@@ -1,4 +1,51 @@
-#  Overview
+#  Main
+
+## Network Generation
+
+#### Command Line Start
+```bash
+besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustValidator --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
+```
+#### Genesis File 
+
+```json
+{
+  "config":{
+    "chainId":211,
+    "constantinoplefixblock":0,
+    "clique":{
+      "blockperiodseconds":10,
+      "epochlength":600000
+    }
+  },
+  "coinbase":"0x0000000000000000000000000000000000000000",
+  "difficulty":"0x1",
+"extraData":"0x0000000000000000000000000000000000000000000000000000000000000000ebf35eb8d75ba70f939d2e1269202c60c864432e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit":"0xa00000",
+  "mixHash":"0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  "nonce":"0x0",
+  "timestamp":"0x5c51a607",
+  "alloc": {
+      "343676336d43aa00cd8a054f3f7c7a0d3f22fee3": {
+        "balance": "0xad78ebc5ac6200000"
+      },
+      "298c1d624d08a540b680fe3a90e99f0405b6e260": {
+        "balance": "900000000000000000000"
+      },
+      "f4a54b1652799eea9b5c2ba12abf5eaa3ccb2885": {
+        "balance": "100000000000000000000"
+      },
+      "4ea7f4d4fdaccc0c26327468e851c5dfd5446bd2": {
+        "balance": "900000000000000000000"
+      }
+   },
+  "number":"0x0",
+  "gasUsed":"0x0",
+  "parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000"
+}
+```
+
+## References
 
 [![asciicast](https://asciinema.org/a/9FtsNbMP4KaYOX8n4s4bvb88r.svg)](https://asciinema.org/a/9FtsNbMP4KaYOX8n4s4bvb88r)
 
