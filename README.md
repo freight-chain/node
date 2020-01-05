@@ -148,9 +148,6 @@ $ besu --data-path=data public-key export-address --to=data/nodeAddress
 ```bash
 nohup besu --data-path=data --genesis-file=genesis.json --p2p-port=30303 --rpc-http-enabled --rpc-http-api=ETH,NET,CLIQUE --host-whitelist="*" --rpc-http-cors-origins="all" --rpc-http-port=8545 > /home/ubuntu/ft-node-log 2>&1 &
 ```
-===
+---
 
-enode://35b59bc87330078d687dc769c4b972beb8621fd71f79168b5decca94def69cd8e056340b2fe7e298e80a0904159af5b658602ea38d002fa98099a10eefaae724@3.133.153.14:30303
-
-===
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+(c) 2020 - FreightTrust & Clearing Corporation . All Rights Reserved of their respective owners.
