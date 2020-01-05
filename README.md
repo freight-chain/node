@@ -2,7 +2,9 @@
 
 > Freight Trust Besu Node Quickstart Guide and Overview 
 
-## Network Generation
+## Bootnode
+
+`enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305`
 
 #### Command Line Start
 ```bash
