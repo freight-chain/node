@@ -1,4 +1,6 @@
-#  Main
+# <img src="header.png" alt="Freight Trust Node" height="60px">
+
+> Freight Trust Besu Node Quickstart Guide and Overview 
 
 ## Network Generation
 
