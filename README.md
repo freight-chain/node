@@ -19,7 +19,9 @@ $ nano
 
 # A window will show now. You will COPY and PASTE the genesis.json file located below, then hit COMMAND+O to WRITE OUT the file. Type genesis.json to save the file as genesis.json 
 # Now we start TMUX
-
+# First make sure that we can scroll up in case you have errors!
+$ echo 'set -g mouse on' >> ~/.tmux.conf
+# start TMUX window
 $ tmux
 # Now that tmux is running you can start to connect to the network and once you disconnect from the node, it will still be running.
 
