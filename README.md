@@ -8,8 +8,38 @@
 
 #### Command Line Start
 ```bash
-besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustValidator --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
+# This command changes you into the folder for hyperledger besu
+$ cd besu-1.3.8
+
+# This command generates your nodes private keys and address
+$ bin/besu --data-path=data public-key export-address --to=data/nodeAddres 
+
+# This command creates the gensis.json file
+$ nano 
+
+# A window will show now. You will COPY and PASTE the genesis.json file located below, then hit COMMAND+O to WRITE OUT the file. Type genesis.json to save the file as genesis.json 
+# Now we start TMUX
+
+$ tmux
+# Now that tmux is running you can start to connect to the network and once you disconnect from the node, it will still be running.
+
+# This command connects you to the network
+bin/besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustValidator --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
 ```
+
+## [Files](#files)
+Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
+[Corretto Java 11.0.5](https://corretto.aws/downloads/resources/11.0.5.10.1/java-11-amazon-corretto-jdk_11.0.5.10-1_amd64.deb)
+[Besu 1.3.8](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.tar.gz)
+
+Install Java 11.0.5 and Besu 1.3.8 (mac and windows)
+[Corretto Java 11.0.5 Download Page](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
+[Besu 1.3.8 Windows/Mac](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.zip)
+[Pegasys Solutions Page](https://pegasys.tech/solutions/hyperledger-besu/)
+
+Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
+
+
 #### Genesis File 
 
 ```json
