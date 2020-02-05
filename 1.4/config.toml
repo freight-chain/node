@@ -1,0 +1,27 @@
+# @file: config.toml
+# @version: 2020.02.03
+# @user: configuration file for network, freight trust, chain id: 211
+# github.com/freight-chain
+
+# Data Path
+data-path="~/data"
+
+# Network
+bootnodes=["enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305"]
+
+genesis-file="~/genesis.json"
+
+# Port Mapping
+p2p-host="0.0.0.0"
+p2p-port=30305
+max-peers=42
+
+rpc-http-host="0.0.0.0"
+rpc-http-port=8545
+rpc-http-api="ETH,NET,CLIQUE"
+
+rpc-ws-host="0.0.0.0"
+rpc-ws-port=8546
+
+# Safety Checks OFF
+miner-enabled=false
