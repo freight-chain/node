@@ -25,9 +25,12 @@ $ echo 'set -g mouse on' >> ~/.tmux.conf
 $ tmux
 # Now that tmux is running you can start to connect to the network and once you disconnect from the node, it will still be running.
 
-# This command connects you to the network
-bin/besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustValidator --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
+# This command connects you to the network - You can name your identity anything.
+bin/besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustProxy --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
 ```
+# Planned upgrade of network (client upgrade)
+For most recent testing of planned network upgrade to 1.4.4 besu client please see [network upgrade](https://github.com/freight-chain/network-upgrade)
+
 
 ## [Files](#files)
 Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
