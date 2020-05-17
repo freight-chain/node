@@ -131,12 +131,12 @@ Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 **<!> Running below 1.3.8 is not supported <!>**
 
 ## Notes
-If you installed using `homebrew` just run it as `besu`
+If you installed using `homebrew` just run it as `besu` (Mac OS Only)
 If you installed using the above links to *Besu 1.3.8* you must append `bin/` to `besu` so that the command reads `bin/besu` in order to run. 
 Verify you installed by running `besu --version` or `bin/besu --version` in the *directory*/*folder* that `besu-1.3.8` is located in.
 
 ### Clean Install Commands 
-#### This uses linuxbrew 
+
 ```bash
 $ sudo apt update -y
 $ sudo apt-get install -y java-common build-essential software-properties-common # curl file git software-properties-common ca-certificates wget gnupg-agent apt-transport-https
@@ -145,14 +145,7 @@ $ sudo apt-get install -y java-common
 $ wget https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.deb
 $ sudo dpkg -i amazon-corretto-11-x64-linux-jdk.deb
 $ sudo apt update
-# $ sudo apt install gcc g++ make -y
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-
+// Removed Linuxbrew, no longer supporting this install method
 
 $ sudo yum -y install ntp || true
 $ sudo apt-get --assume-yes install ntp || true
