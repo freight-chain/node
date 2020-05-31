@@ -14,6 +14,21 @@
 
 `enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305`
 
+
+## Command Line Install using the Besu-Install.sh script (clean)
+> this script is for ubuntu, with a computer not having any of the needed additional packages. 
+
+To run the script type `chmod +x besu-install.sh` then `. ./besu-install.sh`
+
+[![asciicast](https://asciinema.org/a/334253.svg)](https://asciinema.org/a/334253)
+
+
+## Genesis 
+
+> this is a recording of the genesis event, circa January 3rd, 2020
+
+[![asciicast](https://asciinema.org/a/287991.svg)](https://asciinema.org/a/287991)
+
 #### Command Line Start
 
 ```bash
