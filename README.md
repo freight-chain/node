@@ -169,14 +169,7 @@ $ sudo apt-get install -y java-common
 $ wget https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.deb
 $ sudo dpkg -i amazon-corretto-11-x64-linux-jdk.deb
 $ sudo apt update
-# $ sudo apt install gcc g++ make -y
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-
+// Removed Linuxbrew, no longer supporting this install method
 
 $ sudo yum -y install ntp || true
 $ sudo apt-get --assume-yes install ntp || true
