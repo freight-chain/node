@@ -40,11 +40,13 @@ bin/besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identit
 
 # Planned upgrade of network (client upgrade)
 
-For most recent testing of planned network upgrade to 1.4.4 besu client please see [network upgrade](https://github.com/freight-chain/network-upgrade)
+For most recent testing of planned network upgrade to 1.4.4 besu client please
+see [network upgrade](https://github.com/freight-chain/network-upgrade)
 
 ## [Files](#files)
 
-Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
+Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers
+use the Corretto Download Page (e.g. rpm)
 [Corretto Java 11.0.5](https://corretto.aws/downloads/resources/11.0.5.10.1/java-11-amazon-corretto-jdk_11.0.5.10-1_amd64.deb)
 [Besu 1.3.8](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.tar.gz)
 
@@ -98,17 +100,16 @@ Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 
 [![asciicast](https://asciinema.org/a/9FtsNbMP4KaYOX8n4s4bvb88r.svg)](https://asciinema.org/a/9FtsNbMP4KaYOX8n4s4bvb88r)
 
-[Freight Trust](https://freighttrust.com)
-[Telegram](https://t.me/freighttrust)
+[Freight Trust](https://freighttrust.com) [Telegram](https://t.me/freighttrust)
 [For a Current List of Bootnodes Read This Google Sheet](https://docs.google.com/spreadsheets/d/1MQkG1gmciT5mw9tdod3sHryRvUxTXBjt7c1fgg9ndQQ/edit?usp=sharing)
 
-This is intended for ensuring you have the correct directory structure along with the valid configuration files
+This is intended for ensuring you have the correct directory structure along
+with the valid configuration files
 
 - genesis.json
 - static-nodes.json
 - auth.toml
-- config.toml
-  node/data
+- config.toml node/data
 
 ### Already Installed Hyperledger/Besu
 
@@ -125,13 +126,17 @@ Always `git pull` to make sure you have the latest `config.toml` file.
 
 ### Abstract
 
-The intent of this guide is to get you to connect to the dry-run network on your personal computer. Having a GUI will help those unfamiliar with using the command line. Please note that this is written from the perspective of a Mac OS X user, and we are working on fixing any Windows issues.
+The intent of this guide is to get you to connect to the dry-run network on your
+personal computer. Having a GUI will help those unfamiliar with using the
+command line. Please note that this is written from the perspective of a Mac OS
+X user, and we are working on fixing any Windows issues.
 
 Where you see /home/user/ for windows it would be C:\Home\User
 
 ## [Files](#files)
 
-Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
+Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers
+use the Corretto Download Page (e.g. rpm)
 [Corretto Java 11.0.5](https://corretto.aws/downloads/resources/11.0.5.10.1/java-11-amazon-corretto-jdk_11.0.5.10-1_amd64.deb)
 [Besu 1.3.8](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.tar.gz)
 
@@ -146,9 +151,11 @@ Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 
 ## Notes
 
-If you installed using `homebrew` just run it as `besu`
-If you installed using the above links to _Besu 1.3.8_ you must append `bin/` to `besu` so that the command reads `bin/besu` in order to run.
-Verify you installed by running `besu --version` or `bin/besu --version` in the _directory_/_folder_ that `besu-1.3.8` is located in.
+If you installed using `homebrew` just run it as `besu` If you installed using
+the above links to _Besu 1.3.8_ you must append `bin/` to `besu` so that the
+command reads `bin/besu` in order to run. Verify you installed by running
+`besu --version` or `bin/besu --version` in the _directory_/_folder_ that
+`besu-1.3.8` is located in.
 
 ### Clean Install Commands
 
@@ -205,4 +212,5 @@ nohup besu --data-path=data --genesis-file=genesis.json --p2p-port=30303 --rpc-h
 
 ---
 
-(c) 2020 - FreightTrust & Clearing Corporation . All Rights Reserved of their respective owners.
+(c) 2020 - FreightTrust & Clearing Corporation . All Rights Reserved of their
+respective owners.
