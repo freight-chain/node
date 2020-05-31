@@ -28,8 +28,6 @@ sudo apt-get update -y
 wget https://dl.bintray.com/hyperledger-org/besu-repo/besu-1.4.5.tar.gz
 tar xzvf besu-1.4.5.tar.gz
 cd besu-1.4.5
-mkdir node
-cd node
 wget https://raw.githubusercontent.com/freight-chain/node/master/genesis.json
 
 bin/besu --data-path=data public-key export-address --to=data/nodeAddress
