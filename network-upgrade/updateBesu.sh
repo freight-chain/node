@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
-TEMP=`mktemp -d`
+TEMP=$(mktemp -d)
 
 function cleanup() {
-	rm -rf "$TEMP"
+  rm -rf "$TEMP"
 }
 trap cleanup EXIT
 
@@ -15,9 +15,9 @@ curl -o "$TEMP/besu-$VERSION.zip" -L --fail "$URL"
 unzip -t "$TEMP/besu-$VERSION.zip"
 
 echo "Calculating new hash..."
-HASH=`shasum -a 256 "$TEMP/besu-$VERSION".zip | cut -d ' ' -f 1`
+HASH=$(shasum -a 256 "$TEMP/besu-$VERSION".zip | cut -d ' ' -f 1)
 
-cat > besu.rb <<EOF
+cat >besu.rb <<EOF
 class Besu < Formula
   desc "hyperledger besu ethereum client"
   homepage "https://github.com/hyperledger/besu"
