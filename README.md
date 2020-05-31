@@ -1,23 +1,32 @@
 # <img src="header.png" alt="Freight Trust Node" height="60px">
 
-> Freight Trust Besu Node Quickstart Guide and Overview 
+> Freight Trust Besu Node Quickstart Guide and Overview
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/freight-chain/node)
+![Bintray](https://img.shields.io/bintray/v/hyperledger-org/besu-repo/besu)
+![helpdesk](https://badgen.net/badge/support/@freight.zendesk.com/8500650?icon=label)
+![rulebook](https://badgen.net/badge/:Rulebook/v2020.06/0077be?icon=label)
+![pgp](https://badgen.net/keybase/pgp/freighttrust)
+
+---
 
 ## Bootnode
 
 `enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305`
 
 #### Command Line Start
+
 ```bash
 # This command changes you into the folder for hyperledger besu
 $ cd besu-1.3.8
 
 # This command generates your nodes private keys and address
-$ bin/besu --data-path=data public-key export-address --to=data/nodeAddres 
+$ bin/besu --data-path=data public-key export-address --to=data/nodeAddres
 
 # This command creates the gensis.json file
-$ nano 
+$ nano
 
-# A window will show now. You will COPY and PASTE the genesis.json file located below, then hit COMMAND+O to WRITE OUT the file. Type genesis.json to save the file as genesis.json 
+# A window will show now. You will COPY and PASTE the genesis.json file located below, then hit COMMAND+O to WRITE OUT the file. Type genesis.json to save the file as genesis.json
 # Now we start TMUX
 # First make sure that we can scroll up in case you have errors!
 $ echo 'set -g mouse on' >> ~/.tmux.conf
@@ -28,11 +37,13 @@ $ tmux
 # This command connects you to the network - You can name your identity anything.
 bin/besu --data-path=data --genesis-file=genesis.json --p2p-port=30305 --identity=FreightTrustProxy --bootnodes=enode://694c9cdd1a95ea242cf194d6e0738c44379446ed59abe1a34763dd48f700a3edf3f849b5b2127d38202583ec17eecee604d15d3c7bf83a86494c26571507400e@54.226.223.85:30305
 ```
+
 # Planned upgrade of network (client upgrade)
+
 For most recent testing of planned network upgrade to 1.4.4 besu client please see [network upgrade](https://github.com/freight-chain/network-upgrade)
 
-
 ## [Files](#files)
+
 Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
 [Corretto Java 11.0.5](https://corretto.aws/downloads/resources/11.0.5.10.1/java-11-amazon-corretto-jdk_11.0.5.10-1_amd64.deb)
 [Besu 1.3.8](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.tar.gz)
@@ -44,43 +55,42 @@ Install Java 11.0.5 and Besu 1.3.8 (mac and windows)
 
 Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 
-
-#### Genesis File 
+#### Genesis File
 
 ```json
 {
-  "config":{
-    "chainId":211,
-    "constantinoplefixblock":0,
-    "clique":{
-      "blockperiodseconds":10,
-      "epochlength":600000
+  "config": {
+    "chainId": 211,
+    "constantinoplefixblock": 0,
+    "clique": {
+      "blockperiodseconds": 10,
+      "epochlength": 600000
     }
   },
-  "coinbase":"0x0000000000000000000000000000000000000000",
-  "difficulty":"0x1",
-"extraData":"0x0000000000000000000000000000000000000000000000000000000000000000ebf35eb8d75ba70f939d2e1269202c60c864432e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-  "gasLimit":"0xa00000",
-  "mixHash":"0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
-  "nonce":"0x0",
-  "timestamp":"0x5c51a607",
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "difficulty": "0x1",
+  "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000ebf35eb8d75ba70f939d2e1269202c60c864432e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "gasLimit": "0xa00000",
+  "mixHash": "0x63746963616c2062797a616e74696e65206661756c7420746f6c6572616e6365",
+  "nonce": "0x0",
+  "timestamp": "0x5c51a607",
   "alloc": {
-      "343676336d43aa00cd8a054f3f7c7a0d3f22fee3": {
-        "balance": "0xad78ebc5ac6200000"
-      },
-      "298c1d624d08a540b680fe3a90e99f0405b6e260": {
-        "balance": "900000000000000000000"
-      },
-      "f4a54b1652799eea9b5c2ba12abf5eaa3ccb2885": {
-        "balance": "100000000000000000000"
-      },
-      "4ea7f4d4fdaccc0c26327468e851c5dfd5446bd2": {
-        "balance": "900000000000000000000"
-      }
-   },
-  "number":"0x0",
-  "gasUsed":"0x0",
-  "parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000"
+    "343676336d43aa00cd8a054f3f7c7a0d3f22fee3": {
+      "balance": "0xad78ebc5ac6200000"
+    },
+    "298c1d624d08a540b680fe3a90e99f0405b6e260": {
+      "balance": "900000000000000000000"
+    },
+    "f4a54b1652799eea9b5c2ba12abf5eaa3ccb2885": {
+      "balance": "100000000000000000000"
+    },
+    "4ea7f4d4fdaccc0c26327468e851c5dfd5446bd2": {
+      "balance": "900000000000000000000"
+    }
+  },
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
 ```
 
@@ -93,30 +103,34 @@ Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 [For a Current List of Bootnodes Read This Google Sheet](https://docs.google.com/spreadsheets/d/1MQkG1gmciT5mw9tdod3sHryRvUxTXBjt7c1fgg9ndQQ/edit?usp=sharing)
 
 This is intended for ensuring you have the correct directory structure along with the valid configuration files
+
 - genesis.json
 - static-nodes.json
 - auth.toml
 - config.toml
-node/data
-
+  node/data
 
 ### Already Installed Hyperledger/Besu
+
 If you already have Hyperledger/Besu installed, simply
+
 ```bash
 git clone https://github.com/freight-chain/node.git
 cd node
 besu --data-path=data public-key export-address --to=data/nodeAddres
 besu --data-path=data --genesis-file=genesis.json --config-file=config.toml --p2p-port=30303 --rpc-http-enabled --rpc-http-api=ETH,NET,CLIQUE --host-whitelist="*" --rpc-http-cors-origins="all" --rpc-http-port=8545
 ```
-Always `git pull` to make sure you have the latest `config.toml` file. 
+
+Always `git pull` to make sure you have the latest `config.toml` file.
 
 ### Abstract
+
 The intent of this guide is to get you to connect to the dry-run network on your personal computer. Having a GUI will help those unfamiliar with using the command line. Please note that this is written from the perspective of a Mac OS X user, and we are working on fixing any Windows issues.
 
 Where you see /home/user/ for windows it would be C:\Home\User
 
-
 ## [Files](#files)
+
 Install Java 11.0.5 and Besu 1.3.8 (linux files .deb) for other package managers use the Corretto Download Page (e.g. rpm)
 [Corretto Java 11.0.5](https://corretto.aws/downloads/resources/11.0.5.10.1/java-11-amazon-corretto-jdk_11.0.5.10-1_amd64.deb)
 [Besu 1.3.8](https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.3.8.tar.gz)
@@ -131,12 +145,15 @@ Install using `unzip besu-1.3.8.zip` or `tar zxvf besu-1.3.8.tar.gz`
 **<!> Running below 1.3.8 is not supported <!>**
 
 ## Notes
-If you installed using `homebrew` just run it as `besu`
-If you installed using the above links to *Besu 1.3.8* you must append `bin/` to `besu` so that the command reads `bin/besu` in order to run. 
-Verify you installed by running `besu --version` or `bin/besu --version` in the *directory*/*folder* that `besu-1.3.8` is located in.
 
-### Clean Install Commands 
-#### This uses linuxbrew 
+If you installed using `homebrew` just run it as `besu`
+If you installed using the above links to _Besu 1.3.8_ you must append `bin/` to `besu` so that the command reads `bin/besu` in order to run.
+Verify you installed by running `besu --version` or `bin/besu --version` in the _directory_/_folder_ that `besu-1.3.8` is located in.
+
+### Clean Install Commands
+
+#### This uses linuxbrew
+
 ```bash
 $ sudo apt update -y
 $ sudo apt-get install -y java-common build-essential software-properties-common # curl file git software-properties-common ca-certificates wget gnupg-agent apt-transport-https
@@ -185,6 +202,7 @@ $ besu --data-path=data public-key export-address --to=data/nodeAddress
 ```bash
 nohup besu --data-path=data --genesis-file=genesis.json --p2p-port=30303 --rpc-http-enabled --rpc-http-api=ETH,NET,CLIQUE --host-whitelist="*" --rpc-http-cors-origins="all" --rpc-http-port=8545 > /home/ubuntu/ft-node-log 2>&1 &
 ```
+
 ---
 
 (c) 2020 - FreightTrust & Clearing Corporation . All Rights Reserved of their respective owners.
