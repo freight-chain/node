@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+echo $BASH_VERSION
 
 sudo apt-get install -y java-common build-essential software-properties-common
 wget https://corretto.aws/downloads/resources/11.0.7.10.1/java-11-amazon-corretto-jdk_11.0.7.10-1_amd64.deb
