@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://{environment_id}-{node_id}-connect.{zone_domain}.freighttrust.net/",
+    "description": "Node gets assigned a unique REST API Gateway URL.",
+    "variables": {
+      "environment_id": {
+        "default": "<YOUR_ENV>"
+      },
+      "node_id": {
+        "default": "<YOUR_NODE>"
+      },
+      "zone_domain": {
+        "default": "<REGION>"
+      }
+    }
+  }
+]

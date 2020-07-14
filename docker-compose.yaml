@@ -1,0 +1,36 @@
+    build:
+      context: besu/.
+      args:
+        BESU_VERSION: ${BESU_VERSION}
+    image: freightlayer/besu:${BESU_VERSION}-ibft2
+    environment:
+      - BESU_PUBLIC_KEY_DIRECTORY=/bin/keys
+      - LOG4J_CONFIGURATION_FILE=/config/log-config.xml
+    entrypoint: /opt/besu/start.sh
+    command: [
+      "--data-path=/opt/besu/data",
+      "--genesis-file=/config/genesis.json",
+      "--node-private-key-file=/opt/besu/keys/key",
+      "--rpc-http-enabled",
+      "--rpc-http-api=WEB3,ETH,NET,EEA,ADMIN,IBFT2",
+      "--rpc-http-host=0.0.0.0",
+      "--rpc-http-port=8545",
+      "--rpc-http-cors-origins=*",
+      "--rpc-ws-enabled",
+      "--rpc-ws-api=WEB3,ETH,NET,EEA,ADMIN,IBFT2",
+      "--rpc-ws-host=0.0.0.0",
+      "--rpc-ws-port=8546",
+      "--graphql-http-enabled",
+      "--graphql-http-host=0.0.0.0",
+      "--graphql-http-port=8547",
+      "--graphql-http-cors-origins=*",
+      "--metrics-enabled",
+      "--metrics-host=0.0.0.0",
+      "--metrics-port=9545",
+      "--host-allowlist=*"]
+    volumes:
+      - public-keys:/bin/keys
+      - ./config/besu/log-config.xml:/config/log-config.xml
+      - ./config/besu/ibft2Genesis.json:/config/genesis.json
+      - ./config/besu/networkFiles/bootnode/keys:/opt/besu/keys
+      - ./logs/besu:/var/log/
